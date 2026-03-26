@@ -113,11 +113,11 @@ La factorización QR tiene varias aplicaciones :D. Éstas suelen surgir en conte
 
 ¡Calculemos los valores propios de una matriz! Llamémosla $A\in\textrm{Mat}(n)$ con $n\in\mathbb{Z}^+$ con factorización $A=QR$. Un posible algoritmo para el cálculo de los eigenvalores es el siguiente:
 
-> *Algoritmo 1. Eigenvalores mediante QR*
-> $A^{(0)}=A$
-> **for** $k=1,2,\dots$
-> | $Q^{(k)}R^{(k)}=A^{(k-1)}$
-> | $A^{(k)}=R^{(k)}Q^{(k)}$
+*Algoritmo 1. Eigenvalores mediante QR*
+1. $A^{(0)}=A$
+2. **for** $k=1,2,\dots$
+    1. $Q^{(k)}R^{(k)}=A^{(k-1)}$
+    2. $A^{(k)}=R^{(k)}Q^{(k)}$
 
 Donde $A^{(k)}$ es la $k$-ésima iteración de la matriz $A$. Este algoritmo converge a una matriz diagonal donde cada entrada es un eigenvalor.
 
