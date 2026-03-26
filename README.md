@@ -153,10 +153,11 @@ $$
 1 & x_n & {x_n}^2 &        & {x_n}^{n-1}
 \end{bmatrix}
 \begin{bmatrix}
-c_0\\c_1\\c_2\\ \vdots\\c_{m-1}
+c_0\\ c_1\\ c_2\\ \vdots\\ c_{m-1}
 \end{bmatrix}
+=
 \begin{bmatrix}
-y_0\\y_1\\y_2\\ \vdots\\y_{m-1}
+y_0\\ y_1\\ y_2\\ \vdots\\ y_{m-1}
 \end{bmatrix}
 $$
 > **Entregable 5.** Completa el código en `main.py`
