@@ -154,8 +154,7 @@ $$
 \end{bmatrix}
 \begin{bmatrix}
 c_0\\ c_1\\ c_2\\ \vdots\\ c_{m-1}
-\end{bmatrix}
-=
+\end{bmatrix}=
 \begin{bmatrix}
 y_0\\ y_1\\ y_2\\ \vdots\\ y_{m-1}
 \end{bmatrix}
