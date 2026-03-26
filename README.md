@@ -140,7 +140,7 @@ Para ello podemos usar el siguiente algoritmo:
 
 Dados $x_1,\dots,x_n$ puntos (donde evaluaremos el polinomio) que toman valores $y_1,\dots,y_n$, existe un único polinomio que *interpola* a estos datos en estos puntos. Es decir, existe un polinomio $p$ de grado a lo más $n-1$ de la forma 
 
-$$p(x)=c_0+c_1x+\cdots+c_{n-1}x^nm-1}$$
+$$p(x)=c_0+c_1x+\cdots+c_{n-1}x^{n-1}$$
 
 tal que en cada $x_i$, $p(x_i)=y_i$. Veamos que podemos expresar esto como un sistema de ecuaciones lineales
 
@@ -153,10 +153,18 @@ $$
 1 & x_n & {x_n}^2 &        & {x_n}^{n-1}
 \end{bmatrix}
 \begin{bmatrix}
-c_0\\ c_1\\ c_2\\ \vdots\\ c_{m-1}
+c_0\\
+c_1\\
+c_2\\
+\vdots\\ 
+c_{m-1}
 \end{bmatrix}=
 \begin{bmatrix}
-y_0\\ y_1\\ y_2\\ \vdots\\ y_{m-1}
+y_0\\
+y_1\\
+y_2\\
+\vdots\\
+y_{m-1}
 \end{bmatrix}
 $$
 > **Entregable 5.** Completa el código en `main.py`
