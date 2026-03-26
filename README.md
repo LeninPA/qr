@@ -125,10 +125,22 @@ Donde $A^{(k)}$ es la $k$-ésima iteración de la matriz $A$. Este algoritmo con
 
 ### Sistemas de ecuaciones lineales
 
-Hay varios algoritmos de solucioón de sistemas de ec. lineales. 
+Hay varios algoritmos de solución de sistemas de ec. lineales. Particularmente, el hecho de que la factorización QR nos da una matriz triangular facilita el proceso de solucionar un sistema de ecuaciones lineales. Empezamos desde la última fila, donde obtenemos el valor de la incógnita; posteriormente subimos utilizando el valor obtenido previamente.
 
 > **Entregable 4.** Completa el código en `linear_solver.py`
 
 ### Interpolación de polinomios
 
-Dados $n$ términos $x_1,\dots,x_n$
+Dados $x_1,\dots,x_n$ puntos (donde evaluaremos el polinomio) que toman valores $y_1,\dots,y_n$, existe un único polinomio que *interpola* a estos datos en estos puntos. Es decir, existe un polinomio $p$ de grado a lo más $m-1$ de la forma 
+
+$$p(x)=c_0+c_1x+\cdots+c_{m-1}x^{m-1}$$
+
+tal que en cada $x_i$, $p(x_i)=y_i$. Veamos que podemos expresar esto como un sistema de ecuaciones lineales
+
+\begin{bmatrix}
+a_{m1} & a_{m2} & \cdots & a_{mn}
+\end{bmatrix}
+
+> **Entregable 5.** Completa el código en `main.py`
+
+> **Entregable 6.** Añade una gráfica de la interpolación de un polinomio a $\sin(x)$ en el intervalo $[0,2\pi]$ con $100$ puntos. Recibe 2 puntos extras adicionales en la práctica de tu elección si eres capaz de generar un gif que muestre como la interpolación pasa de $2$ puntos a $100$. Para ello puedes consultar este [link](https://matplotlib.org/stable/users/explain/animations/animations.html)
