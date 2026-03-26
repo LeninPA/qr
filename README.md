@@ -15,6 +15,8 @@
 
 ## Instrucciones
 
+Realiza los entregables en Python puro. Es decir, deberías poder ejecutar todo tu código en un entorno con solamente un Python recién instalado, sin paqueterías externas. La única excepción es para la graficación en el último entregable.
+
 ## ¿Qué demonios es la factorización QR?
 
 Vamos a utilizar esta factorización para aproximar los valores propios de un operador lineal. Para entender este algoritmo primero es necesario retomar algunas definiciones de Álgebra Lineal 1.
