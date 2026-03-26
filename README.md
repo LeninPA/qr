@@ -127,20 +127,38 @@ Donde $A^{(k)}$ es la $k$-ésima iteración de la matriz $A$. Este algoritmo con
 
 Hay varios algoritmos de solución de sistemas de ec. lineales. Particularmente, el hecho de que la factorización QR nos da una matriz triangular facilita el proceso de solucionar un sistema de ecuaciones lineales. Empezamos desde la última fila, donde obtenemos el valor de la incógnita; posteriormente subimos utilizando el valor obtenido previamente.
 
+Para ello podemos usar el siguiente algoritmo:
+
+*Algoritmo 2. Mínimos cuadrados vía factorización QR.* Dado el sistema de ecuaciones lineales $Ax=b$
+1. Calcula la factorización QR de $A$
+2. Calcula el vector $Qb$
+3. Soluciona el sistema triangular superior $Rx=Qb$ para el vector $x$
+
 > **Entregable 4.** Completa el código en `linear_solver.py`
 
 ### Interpolación de polinomios
 
-Dados $x_1,\dots,x_n$ puntos (donde evaluaremos el polinomio) que toman valores $y_1,\dots,y_n$, existe un único polinomio que *interpola* a estos datos en estos puntos. Es decir, existe un polinomio $p$ de grado a lo más $m-1$ de la forma 
+Dados $x_1,\dots,x_n$ puntos (donde evaluaremos el polinomio) que toman valores $y_1,\dots,y_n$, existe un único polinomio que *interpola* a estos datos en estos puntos. Es decir, existe un polinomio $p$ de grado a lo más $n-1$ de la forma 
 
-$$p(x)=c_0+c_1x+\cdots+c_{m-1}x^{m-1}$$
+$$p(x)=c_0+c_1x+\cdots+c_{n-1}x^nm-1}$$
 
 tal que en cada $x_i$, $p(x_i)=y_i$. Veamos que podemos expresar esto como un sistema de ecuaciones lineales
 
+$$
 \begin{bmatrix}
-a_{m1} & a_{m2} & \cdots & a_{mn}
+1 & x_1 & {x_1}^2 &        & {x_1}^{n-1}\\
+1 & x_2 & {x_2}^2 & \cdots & {x_2}^{n-1}\\
+1 & x_3 & {x_3}^2 &        & {x_3}^{n-1}\\
+  & \vdots &      &        & \vdots     \\
+1 & x_n & {x_n}^2 &        & {x_n}^{n-1}
 \end{bmatrix}
-
+\begin{bmatrix}
+c_0\\c_1\\c_2\\ \vdots\\c_{m-1}
+\end{bmatrix}
+\begin{bmatrix}
+y_0\\y_1\\y_2\\ \vdots\\y_{m-1}
+\end{bmatrix}
+$$
 > **Entregable 5.** Completa el código en `main.py`
 
 > **Entregable 6.** Añade una gráfica de la interpolación de un polinomio a $\sin(x)$ en el intervalo $[0,2\pi]$ con $100$ puntos. Recibe 2 puntos extras adicionales en la práctica de tu elección si eres capaz de generar un gif que muestre como la interpolación pasa de $2$ puntos a $100$. Para ello puedes consultar este [link](https://matplotlib.org/stable/users/explain/animations/animations.html)
