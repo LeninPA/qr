@@ -1,4 +1,4 @@
-# Práctica 8
+# Práctica 7
 
 ¡Adentrémonos en el increíble mundo del álgebra lineal numérica! OwO
 
