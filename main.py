@@ -46,27 +46,6 @@ class linspace(collections.abc.Sequence):
     def __hash__(self):
         return hash((type(self), self.start, self.stop, self.num))  
 
-def vandermonde_matrix(x: list[float])->list[list[float]]:
-    """Genera una matriz de Vandermonde"""
-
-def interpolate(points: list[float], values: list[float]) -> list[float]:
-    """
-    Interpola un polinomio a los puntos
-
-    Devuelve los coeficientes del polinomio
-    """
-    M = vandermonde_matrix(points)
-    return solve(M, values)
-
-
-def interpolate_sine(n:int)->list[float]:
-    """Recibe la cantidad de puntos a interpolar la función seno"""
-    lim_inf:float = 0
-    lim_sup:float = 2 * pi
-    points = linspace(lim_inf, lim_sup, n)
-    ...
-
-
 def main():
     ...
 
